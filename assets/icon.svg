@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <!-- PolyCrystal: polymer chain in a unit cell -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#101623"/>
+      <stop offset="1" stop-color="#2b3b52"/>
+    </linearGradient>
+    <radialGradient id="atom" cx="0.35" cy="0.35" r="0.9">
+      <stop offset="0" stop-color="#e8e9ee"/>
+      <stop offset="0.6" stop-color="#9599a4"/>
+      <stop offset="1" stop-color="#5b5f6a"/>
+    </radialGradient>
+    <radialGradient id="oxy" cx="0.35" cy="0.35" r="0.9">
+      <stop offset="0" stop-color="#ff9d9d"/>
+      <stop offset="0.6" stop-color="#d92828"/>
+      <stop offset="1" stop-color="#8f1414"/>
+    </radialGradient>
+  </defs>
+  <rect width="180" height="180" rx="28" fill="url(#bg)"/>
+  <!-- unit cell (parallelogram, orthographic feel) -->
+  <g fill="none" stroke="#f0a53c" stroke-width="4" stroke-linejoin="round" opacity="0.95">
+    <path d="M38 62 L118 50 L146 74 L66 88 Z"/>
+    <path d="M38 62 L38 116 L66 142 L66 88"/>
+    <path d="M66 142 L146 128 L146 74"/>
+    <path d="M118 50 L118 104 L146 128"/>
+    <path d="M38 116 L118 104"/>
+  </g>
+  <!-- bonds along the chain -->
+  <g stroke="#c8ccd6" stroke-width="7" stroke-linecap="round">
+    <line x1="52" y1="72" x2="80" y2="88"/>
+    <line x1="80" y1="88" x2="110" y2="76"/>
+    <line x1="110" y1="76" x2="132" y2="98"/>
+    <line x1="52" y1="72" x2="52" y2="120"/>
+  </g>
+  <!-- carbon atoms -->
+  <g>
+    <circle cx="52" cy="72" r="13" fill="url(#atom)"/>
+    <circle cx="80" cy="88" r="13" fill="url(#atom)"/>
+    <circle cx="110" cy="76" r="13" fill="url(#atom)"/>
+    <circle cx="132" cy="98" r="13" fill="url(#atom)"/>
+    <circle cx="52" cy="120" r="13" fill="url(#atom)"/>
+  </g>
+  <!-- oxygen atoms -->
+  <circle cx="110" cy="76" r="6.5" fill="url(#oxy)"/>
+  <circle cx="52" cy="120" r="6.5" fill="url(#oxy)"/>
+</svg>
