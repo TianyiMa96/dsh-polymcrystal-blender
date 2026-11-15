@@ -1,0 +1,36 @@
+{
+  "name": "dsh-plugin-polycrystal-bridge",
+  "version": "0.3.1",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "description": "DSH × Blender polymer crystallography bridge: isolated Python PBC sidecar + live Blender 4.2+ GUI co-editing",
+  "exports": {
+    ".": "./src/index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "src",
+    "sidecar",
+    "extension",
+    "skills",
+    "locale",
+    "docs",
+    "CHANGELOG.md",
+    "icon.svg",
+    "cordis.patch.yml",
+    "!sidecar/.venv",
+    "!**/.pytest_cache",
+    "!**/pytest-of-*",
+    "!**/pytest-cache-files-*",
+    "!**/*.egg-info",
+    "!**/__pycache__",
+    "!**/*.pyc"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polycrystal-core"
+version = "0.3.1"
+description = "Isolated polymer crystallography & PBC topology sidecar engine for the DSH PolyCrystal Bridge"
+license = { text = "GPL-3.0-or-later" }
+requires-python = ">=3.11"
+authors = [{ name = "DSH PolyCrystal Contributors" }]
+keywords = ["crystallography", "polymer", "pbc", "cif", "blender", "topology"]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+# Core algorithmic dependencies only (MIT/BSD). The periodic bond graph,
+# homology rank classification and PBC unwrapping run on these alone.
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "networkx>=3.0",
+]
+
+[project.optional-dependencies]
+# Crystallographic I/O & symmetry backends (BSD/MIT/Apache).
+crystal = [
+    "gemmi>=0.6.0",
+    "spglib>=2.0",
+    "ase>=3.22",
+    "pymatgen>=2024.1.1",
+]
+# Optional fast neighbor list (MPL-2.0). Falls back to ASE / 27-image scipy.
+fast = ["vesin>=0.2"]
+dev = ["pytest>=7.0"]
+all = [
+    "gemmi>=0.6.0",
+    "spglib>=2.0",
+    "ase>=3.22",
+    "pymatgen>=2024.1.1",
+    "vesin>=0.2",
+    "pytest>=7.0",
+]
+
+[project.scripts]
+polycrystal = "polycrystal_core.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["polycrystal_core*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

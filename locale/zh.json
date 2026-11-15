@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "聚合物晶体 Blender 桥接",
+    "description": "通过隔离的 Python PBC 周期性边界引擎解析 CIF/POSCAR/LAMMPS 聚合物晶体,并在 Blender 4.2+ 图形界面中实时人机协同编辑。提供 polycrystal_env、polycrystal_load、polycrystal_modify、polycrystal_inspect、polycrystal_render 五个工具。不打包 Blender,不污染 Blender 内置 Python。",
+    "detail": "docs/DETAIL.md"
+  }
+}

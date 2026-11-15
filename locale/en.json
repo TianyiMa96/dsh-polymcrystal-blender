@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "PolyCrystal Blender bridge",
+    "description": "Load CIF/POSCAR/LAMMPS polymer crystals through an isolated Python PBC sidecar and co-edit them live in a Blender 4.2+ GUI. Provides polycrystal_env, polycrystal_load, polycrystal_modify, polycrystal_inspect and polycrystal_render tools. Never bundles Blender; never pollutes Blender's Python.",
+    "detail": "docs/DETAIL.md"
+  }
+}

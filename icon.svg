@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Triclinic unit cell wireframe -->
+  <g fill="none" stroke="#4dd0e1" stroke-width="4" stroke-linejoin="round">
+    <path d="M24 96 L72 108 L104 84 L56 72 Z"/>
+    <path d="M24 60 L24 96 M72 72 L72 108 M104 48 L104 84 M56 36 L56 72"/>
+    <path d="M24 60 L72 72 L104 48 L56 36 Z"/>
+  </g>
+  <!-- Helical polymer chain rising through the cell -->
+  <path d="M64 100 C 44 90, 84 78, 64 68 C 44 58, 84 46, 64 36 C 52 30, 60 22, 64 18"
+        fill="none" stroke="#ffb74d" stroke-width="7" stroke-linecap="round"/>
+  <!-- Backbone atoms -->
+  <circle cx="64" cy="100" r="7" fill="#ef5350"/>
+  <circle cx="64" cy="68" r="7" fill="#ef5350"/>
+  <circle cx="64" cy="36" r="7" fill="#ef5350"/>
+  <circle cx="64" cy="18" r="6" fill="#ef5350" opacity="0.55"/>
+</svg>

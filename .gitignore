@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+pytest-of-*/
+pytest-cache-files-*/
+.venv/
+
+# Test artifacts
+.pytest_history/
+
+# OS
+Thumbs.db
+.DS_Store

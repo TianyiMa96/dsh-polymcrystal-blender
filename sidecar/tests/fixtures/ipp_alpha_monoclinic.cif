@@ -1,0 +1,35 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Minimal alpha-isotactic polypropylene (iPP) monoclinic fixture.
+# C2/c parent symmetry, beta ~= 99.3 deg; a single 3_1 helical chain along c
+# is given in a P1 representation (6 backbone C + 3 methyl C). Constructed so
+# that every C-C bond is ~1.53 A; used to validate triclinic minimum-image
+# bond lengths without orthogonal wrapping distortion.
+data_ipp_alpha_monoclinic
+_symmetry_space_group_name_H-M   'C2/c'
+_symmetry_Int_Tables_number      15
+_cell_length_a                   6.65
+_cell_length_b                   20.96
+_cell_length_c                   6.5
+_cell_angle_alpha                90.0
+_cell_angle_beta                 99.3
+_cell_angle_gamma                90.0
+loop_
+_symmetry_equiv_pos_as_xyz
+'x, y, z'
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_disorder_group
+C1 C 0.250000 0.301546 0.000000 1.0 0
+C2 C 0.107425 0.275773 0.143094 1.0 0
+C3 C 0.107425 0.224227 0.309761 1.0 0
+C4 C 0.250000 0.198454 0.500000 1.0 0
+C5 C 0.392575 0.224227 0.690239 1.0 0
+C6 C 0.392575 0.275773 0.856906 1.0 0
+C7 C 0.250000 0.374543 0.000000 1.0 0
+C8 C 0.905520 0.187729 0.276379 1.0 0
+C9 C 0.594480 0.187729 0.723621 1.0 0

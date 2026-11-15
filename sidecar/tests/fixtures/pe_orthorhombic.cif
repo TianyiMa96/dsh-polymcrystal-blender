@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Orthorhombic polyethylene (PE) fixture, space group Pnam (No. 62, b/c-swapped
+# setting of Pnma). a=7.40, b=4.93, c=2.534 A; infinite -(CH2)n- chains along c.
+# One carbon asymmetric unit at (0.192, 0.06, 0) expands to 8 C / 4 zigzag chains
+# with C-C = 1.53 A. Carbon skeleton only (hydrogens omitted for a minimal test).
+data_pe_orthorhombic
+_symmetry_space_group_name_H-M   'Pnam'
+_symmetry_Int_Tables_number      62
+_cell_length_a                   7.40
+_cell_length_b                   4.93
+_cell_length_c                   2.534
+_cell_angle_alpha                90.0
+_cell_angle_beta                 90.0
+_cell_angle_gamma                90.0
+loop_
+_symmetry_equiv_pos_as_xyz
+'x, y, z'
+'-x+1/2, y+1/2, -z'
+'-x, -y+1/2, z+1/2'
+'x+1/2, -y, -z+1/2'
+'-x, -y, -z'
+'x+1/2, -y+1/2, z'
+'x, y+1/2, -z+1/2'
+'-x+1/2, y, z+1/2'
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_disorder_group
+C1 C 0.192 0.06 0.0 1.0 0

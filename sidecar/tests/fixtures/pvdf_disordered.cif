@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Minimal disordered PVDF fixture. Ordered C backbone (disorder_group 0) with
+# two alternative fluorine sites (disorder_group 1 and 2, occupancy 0.5).
+# Used to verify that disorder groups never cross-bond.
+data_pvdf_disordered
+_symmetry_space_group_name_H-M   'P1'
+_symmetry_Int_Tables_number      1
+_cell_length_a                   8.58
+_cell_length_b                   4.91
+_cell_length_c                   2.56
+_cell_angle_alpha                90.0
+_cell_angle_beta                 90.0
+_cell_angle_gamma                90.0
+loop_
+_symmetry_equiv_pos_as_xyz
+'x, y, z'
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_disorder_group
+C1 C 0.000000 0.000000 0.000000 1.0 0
+C2 C 0.000000 0.170700 0.500000 1.0 0
+F1 F 0.158000 0.170700 0.500000 0.5 1
+F2 F 0.842000 0.170700 0.500000 0.5 2
