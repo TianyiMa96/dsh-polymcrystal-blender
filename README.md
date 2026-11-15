@@ -14,6 +14,12 @@ DSH × Blender 聚合物晶体结构桥接插件(GPL-3.0-or-later)。加载 CIF/
 - `skills/polymer-crystallography/` — 指导模型的标准操作技能。
 - `scripts/` — 扩展打包(`pack_extension.py`)与 headless 冒烟测试(`test_blender_ext.py`)。
 
+## 预览
+
+| 正交晶体视角 | 球棍近景 | 晶胞框 |
+| --- | --- | --- |
+| ![正交晶体视角](assets/screenshot-crystal-ortho.png) | ![球棍近景](assets/screenshot-ball-stick-closeup.png) | ![晶胞框](assets/screenshot-unit-cell.png) |
+
 ## 特性(0.3.1)
 
 - **PBC 聚类展开(默认)**。侧车按最小镜像成键、连通分量聚类、沿生成树展开(`polycrystal_core/polymer_unwrap.py`),链/分子在写出 bundle 前就是连贯实体;`ghost`、`boundary_pad`、`half_bond` 全为 0,渲染键长 ≤ 3.5 Å。`periodic_clipped` / `chain_continuous` / `hkl_lamella` 作为显式回退。
