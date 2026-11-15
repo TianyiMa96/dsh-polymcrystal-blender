@@ -2,6 +2,9 @@
 # dsh-plugin-polycrystal-bridge / PolyCrystal Blender bridge
 
 [![](https://img.shields.io/badge/powered_by-dsh-4D6BFE?style=flat-square&logo=deepseek&logoColor=white)](https://github.com/deepseek-ai/deepseek-harness)
+[![npm version](https://img.shields.io/npm/v/dsh-plugin-polycrystal-bridge?style=flat-square)](https://www.npmjs.com/package/dsh-plugin-polycrystal-bridge)
+[![npm downloads](https://img.shields.io/npm/dm/dsh-plugin-polycrystal-bridge?style=flat-square)](https://www.npmjs.com/package/dsh-plugin-polycrystal-bridge)
+[![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)](./LICENSE)
 
 DSH × Blender 聚合物晶体结构桥接插件(GPL-3.0-or-later)。加载 CIF/POSCAR/LAMMPS 聚合物晶体,经隔离 Python PBC 引擎处理周期性边界,推送到 Blender 4.2+ GUI(已在 5.3 上端到端验证)供人与 AI 实时协同编辑与出版级渲染。
 
