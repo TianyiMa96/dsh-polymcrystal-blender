@@ -137,6 +137,34 @@ python scripts/pack_extension.py
 
 `src/tools/*.js` 以官方模式 `import { defineTool } from '@deepseek-ai/dsh-tools'` 注册工具,但该包未发布到 npm(安装内版本 0.2.2-rc.3),profile 安装的插件无法从 DSH 安装目录解析它。因此本仓库自带 `node_modules/`(MIT 许可的 `@deepseek-ai/{dsh-tools,cordis,schemastery,dsh-scope,dsh-llm,dsh-util-values,cosmokit,dsh-typert-protocol,dsh-util-crypto,dsh-brand,dsh-timeout,dsh-error}` + `zod`,共约 6.7 MB,从本机 DSH 安装 `app.asar` 提取,与其版本精确匹配)。升级 DSH 后需重新提取同步。若日后 `@deepseek-ai/dsh-tools` 正式发布,可改为常规依赖。
 
+## 致谢(Acknowledgments)
+
+本项目站在以下开源项目的肩膀上,感谢这些库的作者与社区:
+
+**平台与宿主**
+
+- [Blender](https://www.blender.org/) — Blender Foundation,几何节点程序化建模与渲染宿主(GPL,本插件为其扩展)。
+- [DeepSeek Harness (DSH)](https://github.com/deepseek-ai/deepseek-harness) — 插件宿主与 agent 工具框架;`@deepseek-ai/dsh-tools` 等运行时依赖(MIT)随仓库 `node_modules/` 内联分发。
+
+**科学计算核心**(sidecar 直接依赖,均为宽松许可)
+
+- [NumPy](https://numpy.org/) / [SciPy](https://scipy.org/) (BSD-3) — 数值与 27 镜像邻居搜索回退。
+- [NetworkX](https://networkx.org/) (BSD-3) — 周期键图连通分量聚类与生成树展开。
+
+**晶体学后端**(可选依赖 `crystal`/`fast` extra)
+
+- [gemmi](https://gemmi.readthedocs.io/) (MPL-2.0) — CIF/结构读取与对称操作。
+- [spglib](https://spglib.readthedocs.io/) (BSD-3) — 空间群识别。
+- [ASE](https://wiki.fysik.dtu.dk/ase/) (LGPL-2.1) — 周期结构与邻居列表回退。
+- [pymatgen](https://pymatgen.org/) (MIT) — 晶体结构分析与晶格操作。
+- [vesin](https://github.com/Luthaf/vesin) (MPL-2.0) — 高性能周期邻居列表。
+
+**借鉴与参考**
+
+- [batoms](https://github.com/ex4cycle/batoms) 与 [Molecular Nodes](https://github.com/BradyAJohnston/MolecularNodes) — Blender 分子/结构可视化的先行者,本插件的可选渲染后端接口与其思路同源(见 `interop_backends.py`,当前仅作能力检测)。
+- CPK 配色约定(Corey-Pauling-Koltun) — 元素标准着色方案。
+- 单材质 + 几何属性着色的架构,是为规避 Blender 5.x `Join Geometry` 材质索引重排问题而独立设计;文中相关 5.x 兼容结论均为本仓库实测(见 `docs/DETAIL.md`)。
+
 ## 约束与许可
 
 - 不打包、不分发 Blender 本体;要求用户自装 Blender 4.2+(实测 5.3)。
